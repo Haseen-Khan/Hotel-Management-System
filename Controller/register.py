@@ -126,7 +126,7 @@ class Register:
             messagebox.showerror('Error', 'all fields required',parent=self.root)
 
         elif self.var_pass.get() != self.var_conpass.get() :
-            messagebox.showinfo('Success', 'password and confirm password must be same',parent=self.root)
+            messagebox.showinfo('Error', 'password and confirm password must be same',parent=self.root)
         elif self.var_check.get()==0:
             messagebox.showerror('Invalid', 'please agree to the terms and conditions',parent=self.root)
         else:

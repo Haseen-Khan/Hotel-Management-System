@@ -1,12 +1,13 @@
 import sys
 sys.path.append("..")
+from View.hotel import HotelManagementSystem
 
 from tkinter import*
 from tkinter import ttk
 from PIL import Image,ImageTk
 from tkinter import messagebox
 import mysql.connector
-from View.hotel import HotelManagementSystem
+
 
 
 def main():
@@ -65,7 +66,7 @@ class Login_Window:
         lblimg3.place(x=615, y=380, width=25, height=25)
 
         #****login button******
-        loginbtn = Button(frame,command=self.login, text='Login',font=('times new roman', 15, 'bold'),bd=3,relief=RIDGE,fg='white',bg='red',activeforeground='white',activebackground='red')
+        loginbtn = Button(frame,command=self.login_function, text='Login',font=('times new roman', 15, 'bold'),bd=3,relief=RIDGE,fg='white',bg='red',activeforeground='white',activebackground='red')
         loginbtn.place(x=110,y=305,width=120,height=35)
 
         #register button
@@ -83,12 +84,12 @@ class Login_Window:
         self.new_window=Toplevel(self.root)
         self.app= Register(self.new_window)
 
-    def login(self):
-        if self.txtuser.get()=="" or self.txtpass.get()=="":
-            messagebox.showerror('Error','all fields required')
+    def login_function(self):
+        if self.txtuser.get()=="Haseen" or self.txtpass.get()=="123":
+            messagebox.showinfo('Success','Welcome')
 
-        elif self.txtuser.get() == "Haseen" or self.txtpass.get() == "123":
-            messagebox.showinfo('Success', 'Welcome')
+        elif self.txtuser.get() == "" or self.txtpass.get() == "":
+            messagebox.showerror('Error', 'All fields required')
         else:
             conn = mysql.connector.connect(host="localhost", user="root",
                                            password="2589", database='management')

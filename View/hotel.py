@@ -3,7 +3,7 @@ sys.path.append("..")
 
 from tkinter import *
 from PIL import Image, ImageTk
-from View.customer import Customer_Window
+from Model.customer import Customer_Window
 from Model.room import Roombooking
 from Model.details import DetailsRoom
 

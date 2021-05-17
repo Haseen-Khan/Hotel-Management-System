@@ -20,7 +20,7 @@ class DetailsRoom:
         self.root.geometry("1140x480+225+220")
 
         ####title*****
-        lbl_title = Label(self.root, text='ROOM BOOKING DETAILS', font=('times new roman', 18, 'bold'), fg='gold',
+        lbl_title = Label(self.root, text='ROOM DETAILS', font=('times new roman', 18, 'bold'), fg='gold',
                           bg='black', relief=RIDGE)
         lbl_title.place(x=0, y=0, width=1400, height=50)
 
